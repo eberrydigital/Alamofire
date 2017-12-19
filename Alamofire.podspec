@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
-  s.name = 'Alamofire'
-  s.version = '5.0.0.beta.1.eberry'
+  s.name = 'Berryfire'
+  s.version = '5.0.0'
   s.license = 'MIT'
-  s.summary = 'Elegant HTTP Networking in Swift'
-  s.homepage = 'https://github.com/Alamofire/Alamofire'
+  s.summary = 'Beta releases of Alamofire'
+  s.homepage = 'https://github.com/eberrydigital/Alamofire.git'
   s.social_media_url = 'http://twitter.com/AlamofireSF'
   s.authors = { 'Alamofire Software Foundation' => 'info@alamofire.org' }
-  s.source = { :git => 'https://github.com/Alamofire/Alamofire.git', :tag => s.version }
+  s.source = { :git => 'https://github.com/eberrydigital/Alamofire.git', :tag => s.version }
 
   s.ios.deployment_target = '9.0'
   s.osx.deployment_target = '10.11'
