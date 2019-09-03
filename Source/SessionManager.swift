@@ -24,8 +24,8 @@
 
 import Foundation
 
-class DisableServerTrustPoliceManager : ServerTrustPolicyManager {
-    override func serverTrustPolicy(forHost host: String) -> ServerTrustPolicy? {
+public class DisableServerTrustPoliceManager : ServerTrustPolicyManager {
+    override public func serverTrustPolicy(forHost host: String) -> ServerTrustPolicy? {
         return .disableEvaluation
     }
     
