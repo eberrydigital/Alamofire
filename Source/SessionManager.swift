@@ -24,6 +24,15 @@
 
 import Foundation
 
+open class DisableServerTrustPoliceManager : ServerTrustPolicyManager {
+    override func serverTrustPolicy(forHost host: String) -> ServerTrustPolicy? {
+        return .disableEvaluation
+    }
+    
+    public init() {
+        super.init(policies: [:])
+    }
+}
 /// Responsible for creating and managing `Request` objects, as well as their underlying `NSURLSession`.
 open class SessionManager {
 
@@ -49,7 +58,7 @@ open class SessionManager {
         let configuration = URLSessionConfiguration.default
         configuration.httpAdditionalHeaders = SessionManager.defaultHTTPHeaders
 
-        return SessionManager(configuration: configuration)
+        return SessionManager(configuration: configuration, serverTrustPolicyManager: DisableServerTrustPoliceManager())
     }()
 
     /// Creates default values for the "Accept-Encoding", "Accept-Language" and "User-Agent" headers.
